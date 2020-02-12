@@ -1,0 +1,16 @@
+Assignment #1
+
+Tier 3 Model 
+•	Creating Vnet, 3 Subnet & 1 Gatway
+•	VPN Gateway is also defined for connecting VM’s:
+	o	Certificates were installed locally (Root / Client)
+•	Three Network Security Groups defined and connected to Subnets
+•	Two Front end IP’s used (one for VPN Gateway & other Load Balancer Front End IP) (VPN gateway is disabled in the code because it took 30 minutes to build & rebuild if error)
+•	I used Frond End Load balancer (Azure Load balancer). We can used Application Gateway and attached the provisioned NIC’s into the back pool.
+•	Three VM’s are created and connected the all three subnets behind the load balancers
+
+I did in Terraform. It can also be done in bash/ARM/Power shell if we have time.
+Terraform file attached. In this less time I will do this along with my current job, hope you like this. 
+ 
+
+
