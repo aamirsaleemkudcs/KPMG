@@ -1,0 +1,50 @@
+1- we Need to install jp in boxes 	>> apt install jp
+2- If you want to save in a JSON file 	>> curl -H Metadata:true "http://169.254.169.254/metadata/instance?api-version=2017-08-01"  -s | jq '.' > file.json
+3- You can grep in the mata data 	>> curl -H Metadata:true "http://169.254.169.254/metadata/instance?api-version=2017-08-01"  -s | jq '.' | grep macAddress
+				Output	>> "macAddress": "000D3A7F23BD"
+4- Below is the output is in JSON format mata data of running AZURE UbuntuServer machine
+
+# curl -H Metadata:true "http://169.254.169.254/metadata/instance?api-version=2017-08-01"  -s | jq
+{
+  "compute": {
+    "location": "uksouth",
+    "name": "docker-Linux-vm01",
+    "offer": "UbuntuServer",
+    "osType": "Linux",
+    "placementGroupId": "",
+    "platformFaultDomain": "0",
+    "platformUpdateDomain": "0",
+    "publisher": "Canonical",
+    "resourceGroupName": "POC",
+    "sku": "18.04-LTS",
+    "subscriptionId": "585e1ff1-c88f-451c-9f24-747358a4d812",
+    "tags": "",
+    "version": "18.04.201912180",
+    "vmId": "f65f289c-b694-41e5-966a-ed5df9d3cf0e",
+    "vmSize": "Standard_D2s_v3"
+  },
+  "network": {
+    "interface": [
+      {
+        "ipv4": {
+          "ipAddress": [
+            {
+              "privateIpAddress": "10.3.1.5",
+              "publicIpAddress": "51.140.54.160"
+            }
+          ],
+          "subnet": [
+            {
+              "address": "10.3.1.0",
+              "prefix": "24"
+            }
+          ]
+        },
+        "ipv6": {
+          "ipAddress": []
+        },
+        "macAddress": "000D3A7F23BD"
+      }
+    ]
+  }
+}
