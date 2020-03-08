@@ -3,7 +3,7 @@
 3- You can grep in the mata data 	>> curl -H Metadata:true "http://169.254.169.254/metadata/instance?api-version=2017-08-01"  -s | jq '.' | grep macAddress
 				Output	>> "macAddress": "000D3A7F23BD"
 4- Below is the output is in JSON format mata data of running AZURE UbuntuServer machine
-
+#test
 # curl -H Metadata:true "http://169.254.169.254/metadata/instance?api-version=2017-08-01"  -s | jq
 {
   "compute": {
